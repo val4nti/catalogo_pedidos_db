@@ -1,7 +1,7 @@
 package cl.duoc.sonidovivo_backend.controller;
 
 import cl.duoc.sonidovivo_backend.model.Producto;
-import cl.duoc.sonidovivo_backend.service.Productoservice;
+import cl.duoc.sonidovivo_backend.service.ProductoService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,7 +15,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class Productocontroller {
 
-    private final Productoservice productoService;
+    private final ProductoService productoService;
 
     // GET /api/productos            -> lista todo
     // GET /api/productos?nombre=xxx -> filtra por nombre

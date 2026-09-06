@@ -5,7 +5,7 @@ import cl.duoc.sonidovivo_backend.model.DetallePedido;
 import cl.duoc.sonidovivo_backend.model.Pedido;
 import cl.duoc.sonidovivo_backend.model.Producto;
 import cl.duoc.sonidovivo_backend.repository.Pedidorepository;
-import cl.duoc.sonidovivo_backend.repository.Productorepository;
+import cl.duoc.sonidovivo_backend.repository.ProductoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,10 +15,10 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class Pedidoservice {
+public class PedidoService {
 
     private final Pedidorepository pedidoRepository;
-    private final Productorepository productoRepository;
+    private final ProductoRepository productoRepository;
 
     public List<Pedido> listarTodos() {
         return pedidoRepository.findAll();

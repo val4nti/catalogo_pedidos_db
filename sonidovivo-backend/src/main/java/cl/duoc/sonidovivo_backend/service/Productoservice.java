@@ -3,7 +3,7 @@ package cl.duoc.sonidovivo_backend.service;
 
 import cl.duoc.sonidovivo_backend.model.Categoria;
 import cl.duoc.sonidovivo_backend.model.Producto;
-import cl.duoc.sonidovivo_backend.repository.Productorepository;
+import cl.duoc.sonidovivo_backend.repository.ProductoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -11,10 +11,10 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class Productoservice {
+public class ProductoService {
 
-    private final Productorepository productorepository;
-    private final Categoriaservice categoriaService;
+    private final ProductoRepository productorepository;
+    private final CategoriaService categoriaService;
 
     public List<Producto> listarTodos() {
         return productorepository.findAll();
