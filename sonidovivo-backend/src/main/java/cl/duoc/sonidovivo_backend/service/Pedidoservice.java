@@ -1,14 +1,11 @@
 package cl.duoc.sonidovivo_backend.service;
 
-import cl.duoc.sonidovivo_backend.dto.CrearPedidoRequest;
-import cl.duoc.sonidovivo_backend.dto.ItemPedidoRequest;
-import cl.duoc.sonidovivo_backend.exception.RecursoNoEncontradoException;
-import cl.duoc.sonidovivo_backend.exception.StockInsuficienteException;
+
 import cl.duoc.sonidovivo_backend.model.DetallePedido;
 import cl.duoc.sonidovivo_backend.model.Pedido;
 import cl.duoc.sonidovivo_backend.model.Producto;
-import cl.duoc.sonidovivo_backend.repository.PedidoRepository;
-import cl.duoc.sonidovivo_backend.repository.ProductoRepository;
+import cl.duoc.sonidovivo_backend.repository.Pedidorepository;
+import cl.duoc.sonidovivo_backend.repository.Productorepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,10 +15,10 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class PedidoService {
+public class Pedidoservice {
 
-    private final PedidoRepository pedidoRepository;
-    private final ProductoRepository productoRepository;
+    private final Pedidorepository pedidoRepository;
+    private final Productorepository productoRepository;
 
     public List<Pedido> listarTodos() {
         return pedidoRepository.findAll();

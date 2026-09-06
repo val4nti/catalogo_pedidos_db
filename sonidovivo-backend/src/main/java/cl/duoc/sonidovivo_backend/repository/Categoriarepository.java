@@ -8,6 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * CRUD básicos (save, findById, findAll, deleteById, etc.) sin que
  * tengamos que escribir ni una línea de SQL.
  */
-public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
+public interface Categoriarepository extends JpaRepository<Categoria, Long> {
     boolean existsByNombreIgnoreCase(String nombre);
 }

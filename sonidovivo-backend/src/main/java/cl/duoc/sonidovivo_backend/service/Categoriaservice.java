@@ -2,7 +2,7 @@ package cl.duoc.sonidovivo_backend.service;
 
 import cl.duoc.sonidovivo_backend.exception.RecursoNoEncontradoException;
 import cl.duoc.sonidovivo_backend.model.Categoria;
-import cl.duoc.sonidovivo_backend.repository.CategoriaRepository;
+import cl.duoc.sonidovivo_backend.repository.Categoriarepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -10,9 +10,9 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor // Lombok genera el constructor con este campo final -> Spring lo inyecta solo.
-public class CategoriaService {
+public class Categoriaservice {
 
-    private final CategoriaRepository categoriaRepository;
+    private final Categoriarepository categoriaRepository;
 
     public List<Categoria> listarTodas() {
         return categoriaRepository.findAll();

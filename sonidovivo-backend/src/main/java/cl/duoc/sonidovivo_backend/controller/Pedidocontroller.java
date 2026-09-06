@@ -1,8 +1,7 @@
 package cl.duoc.sonidovivo_backend.controller;
 
-import cl.duoc.sonidovivo_backend.dto.CrearPedidoRequest;
 import cl.duoc.sonidovivo_backend.model.Pedido;
-import cl.duoc.sonidovivo_backend.service.PedidoService;
+import cl.duoc.sonidovivo_backend.service.Pedidoservice;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -13,9 +12,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/pedidos")
 @RequiredArgsConstructor
-public class PedidoController {
+public class Pedidocontroller {
 
-    private final PedidoService pedidoService;
+    private final Pedidoservice pedidoService;
 
     @GetMapping
     public List<Pedido> listar(@RequestParam(required = false) Long usuarioId) {

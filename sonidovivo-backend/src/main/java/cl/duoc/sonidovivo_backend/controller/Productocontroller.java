@@ -1,7 +1,7 @@
 package cl.duoc.sonidovivo_backend.controller;
 
 import cl.duoc.sonidovivo_backend.model.Producto;
-import cl.duoc.sonidovivo_backend.service.ProductoService;
+import cl.duoc.sonidovivo_backend.service.Productoservice;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -13,9 +13,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/productos")
 @RequiredArgsConstructor
-public class ProductoController {
+public class Productocontroller {
 
-    private final ProductoService productoService;
+    private final Productoservice productoService;
 
     // GET /api/productos            -> lista todo
     // GET /api/productos?nombre=xxx -> filtra por nombre
