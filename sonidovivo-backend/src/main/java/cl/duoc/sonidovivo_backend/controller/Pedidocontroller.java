@@ -2,12 +2,12 @@ package cl.duoc.sonidovivo_backend.controller;
 
 import cl.duoc.sonidovivo_backend.model.Pedido;
 import cl.duoc.sonidovivo_backend.service.PedidoService;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/pedidos")
@@ -29,9 +29,10 @@ public class PedidoController {
         return pedidoService.buscarPorId(id);
     }
 
+   
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Pedido crear(@Valid @RequestBody CrearPedidoRequest request) {
-        return pedidoService.crearPedido(request);
+    public Pedido crear(@RequestBody Map<String, Object> body) {
+        return pedidoService.crearPedido(body);
     }
 }
