@@ -6,6 +6,7 @@ import cl.duoc.sonidovivo_backend.model.Producto;
 import cl.duoc.sonidovivo_backend.repository.ProductoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import cl.duoc.sonidovivo_backend.exception.RecursoNoEncontradoException;
 
 import java.util.List;
 
